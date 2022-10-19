@@ -1,7 +1,7 @@
 
 const productos =[
     {id:"1" , nombre:"Aceite reconstructor" , stock: 6 ,categoria: "Capilar" ,precio:5000, descuento:0, img:"https://img.freepik.com/psd-gratis/frasco-gotero-vidrio-ambar-maqueta-caja_358694-1339.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729" },
-    {id:"2" , nombre:"Anti-freez" , stock: 3 ,categoria: "Coleccionables" ,precio:1800, descuento:5, img:"https://img.freepik.com/psd-gratis/maqueta-caja-botella-spray-cosmetico-vidrio-ambar_358694-1316.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729" },
+    {id:"2" , nombre:"Anti-freez" , stock: 3 ,categoria: "Capilar" ,precio:1800, descuento:5, img:"https://img.freepik.com/psd-gratis/maqueta-caja-botella-spray-cosmetico-vidrio-ambar_358694-1316.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729" },
     {id:"3" , nombre:"Sellador de puntas" , stock: 4 ,categoria: "Capilar" ,precio:800, descuento:0, img:"https://img.freepik.com/psd-gratis/maqueta-frasco-gotero-caja_358694-525.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729" },
     {id:"4" , nombre:"Shampoo Nutricion Extrema" , stock: 7 ,categoria: "Capilar" ,precio:3000, descuento:15, img:"https://img.freepik.com/psd-premium/maqueta-botella-cosmetica-caja-exhibicion_358694-2811.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729"},
     {id:"5" , nombre:"Acondicionador Nutricion Extrema" , stock: 3 ,categoria: "Capilar" ,precio:3100, descuento:"15", img:"https://img.freepik.com/psd-gratis/maqueta-botella-cosmetica-caja-exhibicion_358694-2806.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729"},
@@ -16,10 +16,10 @@ const productos =[
     {id:"14" , nombre:"L-Blue" , stock: 3 ,categoria: "Combos" ,precio:20000, descuento:25, img:"https://img.freepik.com/psd-gratis/surtido-productos-cosmeticos-envases_23-2149150196.jpg?size=626&ext=jpg&ga=GA1.2.87316767.1652732729"},
 ]
 
-export const gFetch = () => {
+export const gFetch = (id) => {
     return new Promise ((res, rej) => {
         setTimeout(()=>{
-            res (productos)
+            res (id ? productos.find(prod=>prod.id == id) : productos)
         }, 3000)
         
     })

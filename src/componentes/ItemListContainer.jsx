@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Cards } from "./Cards";
 import { gFetch } from "./helpers/gFetch";
+import { Loading } from "./Loading/Loading";
 
 
 
@@ -36,9 +37,9 @@ export const ItemListContainer = () => {
 
     return (
         <>
-            <section className="d-flex flex-wrap justify-content mt-2 pt-2">
+            <section className="d-flex flex-wrap justify-content-around mt-2 pt-2">
             {loading ?
-                <h2>cargando...</h2>
+                 <Loading/>
                 :
                 productos.map(producto => <Cards  key={producto.id} producto={producto}/>
                )

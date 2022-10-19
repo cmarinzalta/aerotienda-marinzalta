@@ -1,15 +1,30 @@
-body{
-    font-family: 'Inter Tight', sans-serif;
-}
 .navbar {
     background-color: #d6338480;
+    box-shadow: 3px 7px 17px -4px rgba(227,121,217,0.54);
+-webkit-box-shadow: 3px 7px 17px -4px rgba(227,121,217,0.54);
+-moz-box-shadow: 3px 7px 17px -4px rgba(227,121,217,0.54);
+
+    
 }
 .navbar-brand{
-    font-family: 'Tourney', cursive;
+    font-family:'Alegreya', serif;
 }
 .nav-link {
     position: relative;
     
-  }
-
+}
+.card-title{
+    font-family:  'Alegreya', serif;
+}
+.card-text{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.card-title-detail{
+    font-family:  'Alegreya', serif;
+    font-size: 3em;
+}
+.card-text-detail{
+    font-family:'Source Sans Pro', sans-serif ;
+    color: #2b2b2b;
+}
   
